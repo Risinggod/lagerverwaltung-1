@@ -4,7 +4,6 @@
     // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "java",
             "name": "Current File",
@@ -17,7 +16,7 @@
             "request": "launch",
             "mainClass": "de.sbs.fswi2.MainView",
             "projectName": "Lagerverwaltung_1de8d9f7",
-            "vmArgs": "--module-path /Users/student/Documents/jars/javafx-sdk-17.0.8/lib --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": " --module-path /Users/student/Documents/jars/javafx-sdk-17.0.8/lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
