@@ -15,7 +15,7 @@
             "name": "MainView",
             "request": "launch",
             "mainClass": "de.sbs.fswi2.MainView",
-            "projectName": "Lagerverwaltung_1de8d9f7",
+            "projectName": "lagerverwaltung-2_5c55fdfc",
             "vmArgs": " --module-path /Users/student/Documents/jars/javafx-sdk-17.0.8/lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
