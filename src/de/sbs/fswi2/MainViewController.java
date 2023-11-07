@@ -1,6 +1,7 @@
 package de.sbs.fswi2;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
@@ -19,10 +20,17 @@ public class MainViewController implements Initializable{
     @FXML
     private Label lblDatum;
 
-
-     @Override
+    @FXML
+    private Label lblanzalLabel;
+    
+    @FXML
+    private void addTab(ActionEvent event){
+    }
+     
+    
+    @Override
     public void initialize(URL location, ResourceBundle resources) {
-        lblDatum.setText("Hallo");
+        lblDatum.setText(new java.text.SimpleDateFormat("dd.MM.yyyy").format(new Date()));
     }
     
 }

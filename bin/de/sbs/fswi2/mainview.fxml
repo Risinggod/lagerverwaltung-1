@@ -30,7 +30,7 @@
                         <Insets left="8.0" />
                      </HBox.margin>
                   </Label>
-                  <Label fx:id="lblAnzahlDaten" prefWidth="620.0" text="0" HBox.hgrow="ALWAYS" />
+                  <Label fx:id="lblAnzLabel" prefWidth="620.0" text="0" HBox.hgrow="ALWAYS" />
                   <Separator orientation="VERTICAL" prefHeight="20.0" prefWidth="0.0" />
                   <Label fx:id="lblDatum" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefWidth="134.0" text="xx.xx.xxxx" HBox.hgrow="ALWAYS">
                      <HBox.margin>
@@ -50,7 +50,7 @@
         <tabs>
           <Tab text="Start">
                <content>
-                  <GridPane style="-fx-background-color: white;">
+                  <GridPane onMouseClicked="#addTab" style="-fx-background-color: white;">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" />
                       <ColumnConstraints hgrow="SOMETIMES" />
@@ -62,7 +62,7 @@
                      <children>
                         <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
+                              <ImageView onMouseClicked="#addTab" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/plus_gruen_180x180.png" />
                                  </image></ImageView>
