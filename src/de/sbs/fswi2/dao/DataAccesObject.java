@@ -1,13 +1,35 @@
 package de.sbs.fswi2.dao;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 
-public class DataAccesObject implements Speicherbar<DataTransferObject>{
+public class DataAccesObject implements Speicherbar<DataTransferObject> {
 
     @Override
     public List<DataTransferObject> getAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+        try {
+            URL url = new URL("https://jsonplaceholder.typicode.com/posts");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();
+            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String line;
+                StringBuilder response = new StringBuilder();
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
+                System.out.println(response);
+
+            }
+        } catch (Exception e) {
+            System.out.println("Connection coudend be build");
+        }
+        return null;
     }
 
     @Override
@@ -21,7 +43,5 @@ public class DataAccesObject implements Speicherbar<DataTransferObject>{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
-    
-
 
 }

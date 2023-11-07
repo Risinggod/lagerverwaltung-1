@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import de.sbs.fswi2.dao.DataAccesObject;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class MainViewController implements Initializable {
+
+    DataAccesObject dao = new DataAccesObject();
 
     @FXML
     private void beenden(ActionEvent event) {
@@ -33,6 +36,7 @@ public class MainViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        dao.getAll();
         lblDatum.setText(new java.text.SimpleDateFormat("dd.MM.yyyy").format(new Date()));
     }
 
