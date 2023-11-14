@@ -40,10 +40,10 @@ public class MainViewController implements Initializable {
         alert.setTitle("FSWI2-Herzogenaurach");
         alert.setHeaderText("über die Software");
         String text = """
-            LagerverwaltungFX
-            version 1.0
-            Copyright (c) 2023 Fachschule für Wirtschaftsinformatik
-            """;
+                LagerverwaltungFX
+                version 1.0
+                Copyright (c) 2023 Fachschule für Wirtschaftsinformatik
+                """;
         alert.setContentText(text);
         alert.show();
     }
@@ -55,8 +55,16 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
-    private void setAnzahlDaten(){
-        dao.getAll();
+    private void setAnzahlDaten() {
+        Thread getDaThread = new Thread(() -> {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            dao.getAll();
+        });
+        getDaThread.start();
     }
 
     public void setStage(Stage primaryStage) {
