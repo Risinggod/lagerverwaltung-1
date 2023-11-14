@@ -60,9 +60,9 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#addTab" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <Button alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addTab" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                            <graphic>
-                              <ImageView onMouseClicked="#addTab" pickOnBounds="true" preserveRatio="true">
+                              <ImageView pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/plus_gruen_180x180.png" />
                                  </image></ImageView>

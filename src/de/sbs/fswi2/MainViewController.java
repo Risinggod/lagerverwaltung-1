@@ -31,9 +31,7 @@ public class MainViewController implements Initializable {
 
     @FXML
     private void addTab(ActionEvent event) {
-        // int i = 1;
-        // int counter = i++;
-        // lblanzalLabel.setText(Integer.toString(counter));
+        setAnzahlDaten();
     }
 
     @FXML
@@ -53,6 +51,11 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         lblDatum.setText(new java.text.SimpleDateFormat("dd.MM.yyyy").format(new Date()));
+        setAnzahlDaten();
+    }
+
+    @FXML
+    private void setAnzahlDaten(){
         dao.getAll();
     }
 
