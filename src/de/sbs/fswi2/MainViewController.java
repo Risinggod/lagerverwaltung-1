@@ -29,9 +29,9 @@ public class MainViewController implements Initializable {
 
     @FXML
     private void addTab(ActionEvent event) {
-        int i = 1;
-        int counter = i++;
-        lblanzalLabel.setText(Integer.toString(counter));
+        //int i = 1;
+        //int counter = i++;
+        //lblanzalLabel.setText(Integer.toString(counter));
     }
 
     @Override
