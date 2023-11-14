@@ -7,7 +7,7 @@ public class DataAccesObject implements Speicherbar<DataTransferObject> {
 
     @Override
     public List<DataTransferObject> getAll() {
-        // TODO Auto-generated method stub
+        System.out.println(daoservice.DAOHttpService.useService());
         return null;
     }
 
