@@ -52,8 +52,8 @@ public class MainViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        dao.getAll();
         lblDatum.setText(new java.text.SimpleDateFormat("dd.MM.yyyy").format(new Date()));
+        System.out.println(daoservice.DAOHttpService.useService());
     }
 
     public void setStage(Stage primaryStage) {
