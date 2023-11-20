@@ -1,5 +1,16 @@
 package de.sbs.fswi2.dao;
 
-public class DataTransferObject {
+import java.security.Timestamp;
+
+public class DataTransferObject{
     
+    private Timestamp timestamp;
+
+    public DataTransferObject(){
+    }
+    
+    public Timestamp getTimeStamp(){
+        return timestamp;
+    }
 }
+
