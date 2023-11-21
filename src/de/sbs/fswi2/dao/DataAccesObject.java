@@ -1,6 +1,5 @@
 package de.sbs.fswi2.dao;
 
-
 import java.util.List;
 
 import daoservice.DAOHttpService;
@@ -12,22 +11,19 @@ public class DataAccesObject implements Speicherbar<LagerFXModel> {
 
     @Override
     public List<LagerFXModel> getAll() {
-        List<LagerFXModel> jsonList=DAOJsonService.deserialize(daoservice.DAOHttpService.getJSONOffline());
+        List<LagerFXModel> jsonList = DAOJsonService.deserialize(daoservice.DAOHttpService.getJSONOffline());
         System.out.println(jsonList.size());
         return jsonList;
     }
 
     @Override
     public boolean create(LagerFXModel data) {
-        // TODO Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean delete(LagerFXModel data) {
-        // TODO Auto-generated method stub
-         return false;
+        return false;
     }
-
 
 }
