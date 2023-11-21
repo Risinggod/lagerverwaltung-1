@@ -51,7 +51,8 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         lblDatum.setText(new java.text.SimpleDateFormat("dd.MM.yyyy").format(new Date()));
-        setAnzahlDaten();
+        //setAnzahlDaten();
+        lblanzalLabel.setText(String.valueOf(+ dao.getAll().size()));
     }
 
     @FXML

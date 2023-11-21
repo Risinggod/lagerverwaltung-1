@@ -3,22 +3,28 @@ package de.sbs.fswi2.dao;
 
 import java.util.List;
 
-public class DataAccesObject implements Speicherbar<DataTransferObject> {
+import daoservice.DAOHttpService;
+import daoservice.DAOJsonService;
+import daoservice.LagerFXModel;
+import javafx.fxml.FXMLLoader;
+
+public class DataAccesObject implements Speicherbar<LagerFXModel> {
 
     @Override
-    public List<DataTransferObject> getAll() {
-        System.out.println(daoservice.DAOHttpService.getJSONOffline());
-        return null;
+    public List<LagerFXModel> getAll() {
+        List<LagerFXModel> jsonList=DAOJsonService.deserialize(daoservice.DAOHttpService.getJSONOffline());
+        System.out.println(jsonList.size());
+        return jsonList;
     }
 
     @Override
-    public boolean create(DataTransferObject data) {
+    public boolean create(LagerFXModel data) {
         // TODO Auto-generated method stub
         return false;
     }
 
     @Override
-    public boolean delete(DataTransferObject data) {
+    public boolean delete(LagerFXModel data) {
         // TODO Auto-generated method stub
          return false;
     }
